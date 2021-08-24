@@ -1,0 +1,30 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="jumbotron">
+<form [formGroup]="angForm" (ngSubmit)="postdata()" autocomplete="off" >
+  <label>
+    <p class="label-txt">Name:</p>
+    <input type="text" class="input" formControlName="name" autocomplete="off"  placeholder="User Name">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">Enter Email:</p>
+    <input type="email" class="input" formControlName="email" autocomplete="off"  placeholder="Email">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">PASSWORD:</p>
+    <input type="password" class="input" formControlName="password" autocomplete="off"  placeholder="password">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <button type="submit"class="btn btn-primary" [disabled]="!angForm.valid">submit</button>
+</form>
+</div>
